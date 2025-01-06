@@ -1,0 +1,740 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Alatsi&family=Cabin:ital,wght@0,400..700;1,400..700&family=Calistoga&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lalezar&display=swap');
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    font-family: Calibri;
+}
+
+
+#hamburger {
+    position: fixed;
+    color: #D58C17;
+    top: 2em;
+    left: 3em;
+    width: 3em;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Calistoga;
+    border-radius: 10px;
+    padding: 5px;
+    border: 2px solid #D58C17;
+    display: none;
+    z-index: 2;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    background-color: #191919;
+}
+
+#hamburger:hover {
+    background-color: #D58C17;
+    color: white;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff11;
+    z-index: 3;
+    display: none;
+}
+
+
+
+
+
+
+section:nth-child(2n-1){
+    background-color: #191919;
+}
+
+section:nth-child(2n){
+    background-color: #212121;
+}
+
+section > .title {
+    font-size: 2em;
+    font-family: Calistoga;
+}
+
+.container {
+    margin: 0px 5%;
+}
+
+#head {
+    color: white;
+    height: 100vh;
+
+}
+
+
+#head #navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition-duration: 0.5s;
+}
+
+#head .navigation {
+    display: flex;
+    gap: 40px;
+    padding: 20px 0px;
+}
+
+#head .navigation > *:hover {
+    cursor: pointer;
+    color: #D58C17;
+}
+
+#head .logo {
+    color: #D58C17;
+    font-weight: bold;
+    font-family: Calistoga;
+}
+
+#head .search input{
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #D58C17;
+    color: white;
+    width: 7em;
+    border: 0px;
+    font-size: 1.05em;
+}
+
+#head .search input::placeholder{
+    color: white;
+}
+
+
+#head #hero {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+
+#head .nameplace {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 3.5vw;
+}
+
+#head .name {
+    color: #D58C17;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+#head .resume-button button {
+    border: 3px solid #D58C17;
+    background-color: transparent;
+    color: #D58C17;
+    padding: 10px 20px;
+    font-size: 2vw;
+    border-radius: 10px;
+    transition-duration: 1s;
+}
+
+#head .resume-button button:hover {
+    background-color: #D58C17;
+    color: white;
+}
+
+#head .photo img {
+    width: 25vw;
+}
+
+#about-skills {
+    color: white;
+    padding-top: 3em;
+    padding-bottom: 5em;
+}
+
+#about-skills .about-heading {
+    font-size: 2em;
+    font-family: Calistoga;
+}
+
+#about-skills .about-description {
+    margin-left: 3em;
+    font-size: 1.1em;
+}
+
+
+#about-skills .skills {
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+    width: 100%;
+    align-items: center;
+    margin-top: 5em;
+}
+
+#about-skills .skills-heading {
+    font-size: 2em;
+}
+
+#about-skills .tabspace {
+    display: none;
+}
+
+#about-skills .skill-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5em;
+    width: 60%;
+}
+
+#about-skills .skill-box {
+    border: 0px;
+    background: linear-gradient(110deg, #D58C17, #A29C44);
+    width: 7em;
+    height: 7em;
+    font-weight: bold;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+#about-skills .skill-content {
+    width: 100%;
+    height: 100%;
+    background-color: #414141;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#about-skills .skill-logo img {
+    width: 2.7em
+}
+
+#projects {
+    padding: 5em 0px;
+    color: white;
+}
+
+#projects .title {
+    font-size: 2em;
+}
+
+#projects .project-list {
+    margin-top: 5em;
+    display: grid;
+    gap: 5em;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#projects .project-list .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#projects .project-box {
+    border: 2px solid white;
+    padding: 20px;
+    max-width: 25em;
+    min-width: 20em;
+    height: 100%;
+    /* min-height: 20em;
+    max-height: 25em; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    gap: 20px;
+}
+
+#projects .icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#projects .icons img {
+    width: 25px;
+}
+
+#projects .project-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#projects .tech-used {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 90%;
+}
+
+#projects .tech-used > * {
+    padding: 2px 10px;
+    background-color: white;
+    color: #212121;
+    font-weight: bold;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+#projects .view-project-button button {
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid #D58C17;
+    color: #D58C17;
+    font-weight: bold;
+    padding: 7px;
+    transition-duration: 0.5s;
+}
+
+#projects .view-project-button button:hover {
+    background-color: #D58C17;
+    color: white;
+}
+
+
+#internship{
+    padding: 5em 0px;
+    color: white;
+}
+
+#internship .title{
+    font-size: 2em;
+}
+
+#internship .photo img {
+    width: 20em;
+}
+
+#internship .internship-details {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    margin-top: 3em;
+}
+
+#internship .company-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+#internship .company-name {
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#internship .company-duration {
+    font-size: 1.5em;
+}
+
+#internship .company-name:hover {
+    color: #D58C17;
+}
+
+#internship .intern-description {
+    font-size: 1.2em;
+}
+
+
+#certifications {
+    color: white;
+    padding: 5em 0px;
+}
+
+#certifications .list {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    margin-top: 3em;
+}
+
+#certifications .list > .certificate:nth-child(2n-1){
+    display: flex;
+}
+
+#certifications .list > .certificate:nth-child(2n){
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#certifications .certificate {
+    gap: 2em;
+    align-items: center;
+}
+
+#certifications .certificate-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+#certifications .photo img{
+    width: 20em;
+}
+
+#certifications .title {
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#certifications .certificate .title:hover {
+    color: #D58C17;
+}
+
+
+
+#certifications .institute {
+    font-size: 1.2em;
+}
+
+#certifications .description {
+    font-size: 1.1em;
+}
+
+
+#education {
+    padding: 5em 0px;
+    color: white;
+}
+
+#education .list {
+    display: flex;
+    gap: 3em;
+    flex-direction: column;
+    padding-left: 5em;
+    margin-top: 5em;
+}
+
+#education .item {
+    display: flex;
+    gap: 3em;
+}
+
+#education hr {
+    border: 4px solid #D58C17;
+}
+
+#education .education-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 1em 2em;
+    gap: 5px;
+    font-size: 1.1em;
+}
+
+#education .education-box .title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#education .grade {
+    padding: 1em 0px;
+    font-weight: bold;
+}
+
+
+#contact {
+    color: white;
+    padding: 5em 0px;
+    padding-bottom: 2em;
+}
+
+#contact form {
+    padding-left: 3em;
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 20em;
+}
+
+#contact .field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+}
+
+#contact label {
+    font-size: 1.3em;
+}
+
+#contact .field input,
+#contact .field textarea {
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 1.3em;
+    color: white;
+}
+
+#contact .buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#contact .buttons input {
+    font-size: 1.1em;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid #D58C17;
+    padding: 5px 30px;
+    border-radius: 5px;
+    color: #D58C17;
+    transition-duration: 0.5s;
+}
+
+#contact .buttons input:hover {
+    background-color: #D58C17;
+    color: white;
+}
+
+#contact .links {
+    display: flex;
+    gap: 15px;
+    transform: translateX(20px);
+}
+
+#contact .links img {
+    width: 25px;
+    cursor: pointer;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+#footer div {
+    color: #696969;
+}
+
+
+
+@media screen and (max-width: 1080px) {
+
+    #hamburger {
+        display: flex;
+    }
+
+
+
+    #head #navbar{
+      position: fixed;
+      background-color: #434242;
+      flex-direction: column;
+      height: 100vh;
+      justify-content: flex-start;
+      padding: 20px;
+      margin: 0px;
+      width: 15em;
+      transform: translateX(-30em);
+      z-index: 4;
+    }
+
+    #navbar .navigation {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 0px;
+    }
+
+    #navbar .navigation  > * {
+        width: 90%;
+        padding-left: 5px;
+        font-size: 1.3em;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    #navbar .logo {
+        cursor: pointer;
+    }
+
+    #navbar .navigation > *:hover {
+        background-color: #4c4949;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+
+    
+    /* #head .nameplace{
+        font-size: 2em;
+    }
+
+    #head .photo img{
+        width: 15em;
+    } */
+
+    #projects .project-list {
+        grid-template-columns: 1fr;
+    }
+
+    #internship .internship-details{
+        flex-direction: column;
+    }
+
+    #certifications .certificate{
+        flex-direction: column;
+    }
+
+    #certifications .list > .certificate:nth-child(2n){
+        flex-direction: column;
+    }
+
+    #about-skills .skill-list{
+        width: 90%;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    #head #hero{
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 2em;
+    }
+
+    #head .photo img{
+        width: 50vw;
+    }
+
+    #head .nameplace{
+        font-size: 5vw;
+    }
+
+    #about-skills .tabspace{
+        display: inline-block;
+    }
+
+    #about-skills .about-description{
+        margin: 0px;
+        margin-top: 2em;
+        text-align: justify;
+    }
+
+    #internship .intern-description{
+        text-align: justify;
+    }
+
+    #certifications .description{
+        text-align: justify;
+    }
+
+    #education .list{
+        padding-left: 0px;
+    }
+
+    #internship .company-name{
+        font-size: 1.8em;
+    }
+
+    #certifications .title{
+        font-size: 1.8em;
+    }
+
+
+}
+
+
+@media screen and (max-width: 420px) {
+    
+    #projects .project-box{
+        max-width: 90vw;
+        min-width: 50vw;
+    }
+
+    #head .resume-button button{
+        font-size: 3vw;
+    }
+
+    section > .title {
+        font-size: 1.5em !important;
+    }
+
+    #about-skills .skill-list{
+        gap: 3em;
+    }
+
+    #internship .company-name{
+        font-size: 1.3em;
+    }
+
+    #internship .company-duration{
+        font-size: 1em;
+    }
+
+    #internship .intern-description{
+        font-size: 1em;
+    }
+
+    #certifications .title{
+        font-size: 1.3em;
+    }
+
+    #certifications .institute{
+        font-size: 1em;
+    }
+
+    #certifications .description{
+        font-size: 1em;
+    }
+
+    #education .item{
+        flex-direction: column;
+    }
+
+    #contact form{
+        padding-left: 0px;
+    }
+
+    #contact label{
+        font-size: 1em;
+    }
+
+    #contact .field input, #contact .field textarea{
+        font-size: 1em;
+        width: 90%;
+    }
+
+    #contact .links{
+        transform: translateX(-10px);
+    }
+
+    #education .description {
+        text-align: justify;
+    }
+
+}

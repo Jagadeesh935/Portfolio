@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+
+    <div id="hamburger">< JK ></div>
+    <div id="overlay"></div>
+
+    <section id="head">
+      <div id="navbar" class="container">
+        <div onclick="view('head')" class="logo">< JK ></div>
+        <div class="navigation">
+          <div onclick="view('about-skills')">About</div>
+          <div onclick="view('about-skills')">Skills</div>
+          <div onclick="view('projects')">Projects</div>
+          <div onclick="view('internship')">Experience</div>
+          <div onclick="view('education')">Education</div>
+          <div onclick="view('contact')">Contact</div>
+        </div>
+        <div class="search"><input type="search" placeholder="Search" /></div>
+      </div>
+      <div id="hero" class="container">
+        <div class="nameplace">
+          <div>Hey I'M</div>
+          <div class="name myname">Jagadeeshkumar</div>
+          <div>Full Stack Developer</div>
+          <div class="resume-button"><button onclick="window.open('https://drive.google.com/file/d/1nF1Xp6bupSuo-2XyNp9T-W6yytls1zWu/view?usp=drive_link','_blank')">Check Resume</button></div>
+        </div>
+        <div class="photo">
+          <!-- <img
+            src="data:image/jpeg;base64,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"
+            alt=""
+          /> -->
+        </div>
+      </div>
+    </section>
+    <section id="about-skills">
+      <div id="about" class="container">
+        <div class="about-heading title">About</div>
+        <p class="about-description">
+          <span class="tabspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>I am a passionate and motivated full-stack developer eager to
+          kickstart my career in the tech industry. My goal is to contribute to
+          meaningful projects that make an impact, while continuously improving
+          my skills as a developer. I am highly adaptable and open to working
+          with new technologies and frameworks, ensuring I stay relevant and
+          effective in fast-paced environments. I’m looking forward to joining a
+          team where I can apply my knowledge, grow as a developer, and make
+          meaningful contributions to impactful projects.
+        </p>
+      </div>
+      <div class="skills">
+        <div class="skills-heading title">My Skills</div>
+        <div class="skill-list">
+          <div class="skill-box">
+            <div class="skill-content">
+              <div class="skill-logo">
+                <img src="./images/html.png" alt="" />
+              </div>
+              <div class="skill-name">HTML</div>
+            </div>
+          </div>
+          <div class="skill-box">
+            <div class="skill-content">
+              <div class="skill-logo">
+                <img src="./images/css.png" alt="" />
+              </div>
+              <div class="skill-name">CSS</div>
+            </div>
+          </div>
+          <div class="skill-box">
+            <div class="skill-content">
+              <div class="skill-logo"><img src="./images/js.png" alt="" /></div>
+              <div class="skill-name">Javascript</div>
+            </div>
+          </div>
+          <div class="skill-box">
+            <div class="skill-content">
+              <div class="skill-logo">
+                <img src="./images/java.png" alt="" />
+              </div>
+              <div class="skill-name">Java</div>
+            </div>
+          </div>
+          <div class="skill-box">
+            <div class="skill-content">
+              <div class="skill-logo">
+                <img src="./images/python.png" alt="" />
+              </div>
+              <div class="skill-name">Python</div>
+            </div>
+          </div>
+          <div class="skill-box">
+            <div class="skill-content">
+              <div class="skill-logo">
+                <img src="./images/mysql.png" alt="" />
+              </div>
+              <div class="skill-name">MySQL</div>
+            </div>
+          </div>
+          <div class="skill-box">
+            <div class="skill-content">
+              <div class="skill-logo">
+                <img src="./images/django.png" alt="" />
+              </div>
+              <div class="skill-name">Djsngo</div>
+            </div>
+          </div>
+          <div class="skill-box">
+            <div class="skill-content">
+              <div class="skill-logo">
+                <img src="./images/spring.png" alt="" />
+              </div>
+              <div class="skill-name">Spring Boot</div>
+            </div>
+          </div>
+          <div class="skill-box">
+            <div class="skill-content">
+              <div class="skill-logo">
+                <img src="./images/git.png" alt="" />
+              </div>
+              <div class="skill-name">GIt</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container title">Projects</div>
+      <div class="project-list container">
+        <div class="item">
+          <div class="project-box">
+            <div class="icons">
+              <img src="./images/folder.png" alt="" />
+              <img src="./images/github.png" alt="" />
+            </div>
+            <div class="project-title">Chat Application</div>
+            <div class="project-description">
+              Developed a multi-page chat application using Java (swing) that
+              allows multiple client connection and communication. Implemented
+              features like user registration and login, sending and receiving
+              messages between users, card layout for efficient navigation
+              between different pages and user input validation.
+            </div>
+            <div class="tech-used">
+              <div>Java</div>
+              <div>Swing</div>
+              <div>Thread</div>
+              <div>OOPS Concept</div>
+            </div>
+            <div class="view-project-button"><button onclick="window.open('https://github.com/Jagadeesh935/ChatApplicationJava','_blank')">View</button></div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="project-box">
+            <div class="icons">
+              <img src="./images/folder.png" alt="" />
+              <img src="./images/github.png" alt="" />
+            </div>
+            <div class="project-title">Landing Page</div>
+            <div class="project-description">
+              A clean and fully responsive landing page designed using HTML,
+              CSS, and JavaScript. It features an intuitive layout, smooth
+              animations, and a user-friendly interface. The page adapts
+              seamlessly to different screen sizes, ensuring an optimal
+              experience on both desktop and mobile devices. This project
+              demonstrates my front-end development skills and attention to
+              detail in design.
+            </div>
+            <div class="tech-used">
+              <div>HTML</div>
+              <div>CSS</div>
+              <div>Javascript</div>
+            </div>
+            <div class="view-project-button"><button onclick="window.open('https://github.com/Jagadeesh935/Anjana-Landing-Page','_blank')">View</button></div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="project-box">
+            <div class="icons">
+              <img src="./images/folder.png" alt="" />
+              <img src="./images/github.png" alt="" />
+            </div>
+            <div class="project-title">Ecommerce Website</div>
+            <div class="project-description">
+              A full-featured e-commerce website developed using Java Spring,
+              offering essential functionalities such as user registration,
+              product management, shopping cart, checkout, and profile
+              management. This project highlights my expertise in back-end
+              development, database integration, and building scalable web
+              applications.
+            </div>
+            <div class="tech-used">
+              <div>HTML</div>
+              <div>CSS</div>
+              <div>Javascript</div>
+              <div>MySQL</div>
+              <div>Java</div>
+              <div>Spring Boot</div>
+            </div>
+            <div class="view-project-button"><button onclick="window.open('https://github.com/Jagadeesh935/Ecommerce','_blank')">View</button></div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="project-box">
+            <div class="icons">
+              <img src="./images/folder.png" alt="" />
+              <img src="./images/github.png" alt="" />
+            </div>
+            <div class="project-title">ToDo List WEbsite</div>
+            <div class="project-description">
+              A dynamic to-do list website featuring user authentication (login
+              and registration). Users can create multiple lists, add items to
+              each list, and manage tasks with options to update or delete them.
+              This project demonstrates my ability to build interactive web
+              applications with robust user management and CRUD operations.
+            </div>
+            <div class="tech-used">
+              <div>HTML</div>
+              <div>CSS</div>
+              <div>Javascript</div>
+              <div>MySQL</div>
+              <div>Java</div>
+              <div>Spring Boot</div>
+            </div>
+            <div class="view-project-button"><button onclick="window.open('https://github.com/Jagadeesh935/ToDo-List', '_blank')">View</button></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="internship">
+      <div class="container title">Internship Experience</div>
+      <div class="internship-details container">
+        <div class="photo"><img src="./images/internship.png" alt="" /></div>
+        <div class="company-details">
+          <span class="company-name">Teslead | Python Developer ></span>
+          <div class="company-duration">2 Months</div>
+          <div class="intern-description">
+            Worked as a Python developer, focusing on creating web applications
+            for machine installation and operation. Designed and implemented
+            user-friendly interfaces, ensuring seamless interaction between
+            operators and machines. This role enhanced my skills in Python, web
+            development, and real-time system integration, while providing
+            hands-on experience in the manufacturing domain.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications">
+      <div class="container title">certifications</div>
+      <div class="list container">
+        <div class="certificate">
+          <div class="photo"><img src="./images/cimg1.png" alt="" /></div>
+          <div class="certificate-details">
+            <div class="title">Full Stack Java Development ></div>
+            <div class="institute">Pumo Technovations</div>
+            <div class="description">
+              Completed an intensive course in Java Full Stack Development,
+              which covered both front-end and back-end technologies. Gained
+              hands-on experience in developing robust and scalable web
+              applications using Java, Spring Framework, and various front-end
+              technologies like HTML, CSS and JavaScript. The course also
+              included database management using MySQL and RESTful web services,
+              with a strong focus on object-oriented programming principles,
+              software design patterns, and application security. Through
+              practical projects, enhanced problem-solving skills and
+              proficiency in developing end-to-end web solutions.
+            </div>
+          </div>
+        </div>
+
+        <div class="certificate">
+          <div class="photo"><img src="./images/cimg2.png" alt="" /></div>
+          <div class="certificate-details">
+            <div onclick="window.open('https://drive.google.com/file/d/19Iq2p9Tg52LK4S_zUbfLDpPGRa8umQW9/view?usp=drivesdk','_blank')" class="title">Python Programming ></div>
+            <div class="institute">Udemy</div>
+            <div class="description">
+              I successfully completed a comprehensive online course in Python
+              programming on Udemy, covering both foundational and advanced
+              concepts. The course provided in-depth knowledge of data types,
+              control flow, functions, error handling, modules, and
+              object-oriented programming (OOP). It also offered hands-on
+              experience with essential Python libraries, including Pandas and
+              NumPy for data manipulation, and BeautifulSoup for web scraping.
+              Additionally, I gained practical experience in file handling,
+              working with CSV, JSON, and text files, and automating repetitive
+              tasks through scripting. I enhanced my coding skills and developed
+              a solid understanding of how to build scalable Python
+              applications. This course significantly improved my
+              problem-solving abilities and prepared me to take on
+              Python-related development tasks confidently.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="education">
+      <div class="container title">My Educational Journey</div>
+      <div class="list container">
+        <div class="item">
+          <hr />
+          <div class="education-box">
+            <div class="title">Nallamuthu Gounder Mahalingam College</div>
+            <div class="course">B.Com Computer Application</div>
+            <div class="duration">2020-2023</div>
+            <div class="grade">Grade : 84%</div>
+            <div class="description">
+              Completed a Bachelor of Commerce degree with a specialization in
+              Computer Applications. Gained a solid foundation in both business
+              concepts and computer technologies. This degree has strengthened
+              my understanding of both technical and business domains, enhancing
+              my problem-solving and analytical abilities.
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <hr />
+          <div class="education-box">
+            <div class="title">PMG Matric Higher Secondary School</div>
+            <div class="course">HSC</div>
+            <div class="duration">2019-2020</div>
+            <div class="grade">Grade : 92%</div>
+            <div class="description">
+              Completed Higher Secondary education with a specialization in
+              Commerce with Computer Application. This phase laid a solid
+              groundwork in core subjects, enhanced my analytical and
+              problem-solving abilities, and prepared me for higher education.
+              It also helped me develop essential skills such as teamwork, time
+              management, and effective communication.
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <hr />
+          <div class="education-box">
+            <div class="title">PMG Matric Higher Secondary School</div>
+            <div class="course">SSLC</div>
+            <div class="duration">2017-2018</div>
+            <div class="grade">Grade : 93%</div>
+            <div class="description">
+              Completed 10th grade education, building a strong foundation in
+              essential subjects such as mathematics, science, and languages.
+              This stage played a crucial role in developing my curiosity,
+              discipline, and a structured approach to problem-solving, setting
+              the base for higher academic pursuits.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+        <div class="container title">Contact Me</div>
+        <form action="https://formspree.io/f/xdkkplgl" method="post" class="container" id="contact-form">
+            <div class="field">
+                <label for="name">Name</label>
+                <input type="text" name="name" required>
+            </div>
+            <div class="field">
+                <label for="email">Email</label>
+                <input type="email" name="email" required>
+            </div>
+            <div class="field">
+                <label for="name">Message</label>
+                <textarea name="message" rows="5"></textarea>
+            </div>
+            <div class="buttons">
+                <input type="submit" value="Send">
+                <div class="links">
+                    <a href="mailto:jaga55jk@gmail.com"><img src="./images/email.png" alt=""></a>
+                    <a href="https://www.linkedin.com/in/jagadeeshkumar-k-017917257" target="_blank"><img src="./images/linkedin.png" alt=""></a>
+                    <a href="https://wa.me/9344873143" target="_blank"><img src="./images/whatsapp.png" alt=""></a>
+                </div>
+            </div>
+        </form>
+    </section>
+    <section id="footer">
+        <div>@JK</div>
+    </section>
+    <script>
+
+        function view(id){
+            document.getElementById(id).scrollIntoView({
+                behavior : "smooth"
+            })
+        }
+
+        document.getElementById("hamburger").addEventListener("click", () => {
+          document.getElementById("overlay").style.display = "block";
+          document.getElementById("navbar").style.transform = "translateX(0px)"
+        })
+
+        document.getElementById("overlay").addEventListener("click", () => {
+          document.getElementById("navbar").style.transform = "translateX(-30em)";
+          document.getElementById("overlay").style.display = "none"
+        })
+
+
+     
+
+         var name = "Jagadeeshkumar";
+         var writtenName = "";
+         var index = 0;
+         document.querySelector(".myname").innerHTML = "";
+         function writeName(){
+            console.log("function")
+            var namefiled = document.querySelector(".myname")
+            namefiled.innerHTML += name.charAt(index);
+            index++;
+            if (index < name.length){
+                setTimeout(() => {
+                    writeName()
+                }, 100);
+            }
+         }
+         writeName()
+
+
+
+    </script>
+  </body>
+</html>
