@@ -608,7 +608,7 @@ section > .title {
     }
 
     #internship .internship-details{
-        flex-direction: column;
+        flex-direction: column !important;
     }
 
     #certifications .certificate{
