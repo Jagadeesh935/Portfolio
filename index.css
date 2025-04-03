@@ -320,6 +320,7 @@ section > .title {
 
 #internship .photo img {
     width: 20em;
+    height: 12em;
 }
 
 #internship .internship-details {
@@ -327,6 +328,10 @@ section > .title {
     align-items: center;
     gap: 2em;
     margin-top: 3em;
+}
+
+#internship .internship-details:nth-child(2n-1){
+    flex-direction: row-reverse;
 }
 
 #internship .company-details {

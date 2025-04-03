@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-
     <div id="hamburger">< JK ></div>
     <div id="overlay"></div>
 
@@ -29,7 +28,13 @@
           <div>Hey I'M</div>
           <div class="name myname">Jagadeeshkumar</div>
           <div>Full Stack Developer</div>
-          <div class="resume-button"><button onclick="window.open('https://drive.google.com/file/d/1nF1Xp6bupSuo-2XyNp9T-W6yytls1zWu/view?usp=drive_link','_blank')">Check Resume</button></div>
+          <div class="resume-button">
+            <button
+              onclick="window.open('https://drive.google.com/file/d/1vzqqp5hksaEMESQpypp9krCxU6nE1x-T/view?usp=sharing','_blank')"
+            >
+              Check Resume
+            </button>
+          </div>
         </div>
         <div class="photo">
           <!-- <img
@@ -43,7 +48,9 @@
       <div id="about" class="container">
         <div class="about-heading title">About</div>
         <p class="about-description">
-          <span class="tabspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>I am a passionate and motivated full-stack developer eager to
+          <span class="tabspace"
+            >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+          >I am a passionate and motivated full-stack developer eager to
           kickstart my career in the tech industry. My goal is to contribute to
           meaningful projects that make an impact, while continuously improving
           my skills as a developer. I am highly adaptable and open to working
@@ -153,7 +160,13 @@
               <div>Thread</div>
               <div>OOPS Concept</div>
             </div>
-            <div class="view-project-button"><button onclick="window.open('https://github.com/Jagadeesh935/ChatApplicationJava','_blank')">View</button></div>
+            <div class="view-project-button">
+              <button
+                onclick="window.open('https://github.com/Jagadeesh935/ChatApplicationJava','_blank')"
+              >
+                View
+              </button>
+            </div>
           </div>
         </div>
 
@@ -178,7 +191,13 @@
               <div>CSS</div>
               <div>Javascript</div>
             </div>
-            <div class="view-project-button"><button onclick="window.open('https://github.com/Jagadeesh935/Anjana-Landing-Page','_blank')">View</button></div>
+            <div class="view-project-button">
+              <button
+                onclick="window.open('https://github.com/Jagadeesh935/Anjana-Landing-Page','_blank')"
+              >
+                View
+              </button>
+            </div>
           </div>
         </div>
 
@@ -205,7 +224,13 @@
               <div>Java</div>
               <div>Spring Boot</div>
             </div>
-            <div class="view-project-button"><button onclick="window.open('https://github.com/Jagadeesh935/Ecommerce','_blank')">View</button></div>
+            <div class="view-project-button">
+              <button
+                onclick="window.open('https://github.com/Jagadeesh935/Ecommerce','_blank')"
+              >
+                View
+              </button>
+            </div>
           </div>
         </div>
 
@@ -231,7 +256,13 @@
               <div>Java</div>
               <div>Spring Boot</div>
             </div>
-            <div class="view-project-button"><button onclick="window.open('https://github.com/Jagadeesh935/ToDo-List', '_blank')">View</button></div>
+            <div class="view-project-button">
+              <button
+                onclick="window.open('https://github.com/Jagadeesh935/ToDo-List', '_blank')"
+              >
+                View
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -241,8 +272,31 @@
       <div class="internship-details container">
         <div class="photo"><img src="./images/internship.png" alt="" /></div>
         <div class="company-details">
-          <span class="company-name">Teslead | Python Developer ></span>
+          <span class="company-name"
+            >Pumo Technovations | Software Developer ></span
+          >
           <div class="company-duration">2 Months</div>
+          <div class="intern-description">
+            Mobile Application: Developed a loanapp with a user-friendly
+            interface, focusing on functionality and performance.<br />
+            Valve Testing Software: Built a cross-platform desktop application
+            using Electron.js to communicate with industrial machines for
+            pressure testing, integrating real-time data acquisition and
+            analysis.
+          </div>
+        </div>
+      </div>
+      <div class="internship-details container">
+        <div class="photo">
+          <img src="./images/internshipimage.png" alt="" />
+        </div>
+        <div class="company-details">
+          <span
+            onclick="window.open('https://drive.google.com/file/d/1MQ4h9UX0eqEnFGAhCnkfyF0PgeOt5mWa/view?usp=sharing')"
+            class="company-name"
+            >Teslead | Python Developer ></span
+          >
+          <div class="company-duration">3 Months</div>
           <div class="intern-description">
             Worked as a Python developer, focusing on creating web applications
             for machine installation and operation. Designed and implemented
@@ -281,7 +335,12 @@
         <div class="certificate">
           <div class="photo"><img src="./images/cimg2.png" alt="" /></div>
           <div class="certificate-details">
-            <div onclick="window.open('https://drive.google.com/file/d/19Iq2p9Tg52LK4S_zUbfLDpPGRa8umQW9/view?usp=drivesdk','_blank')" class="title">Python Programming ></div>
+            <div
+              onclick="window.open('https://drive.google.com/file/d/19Iq2p9Tg52LK4S_zUbfLDpPGRa8umQW9/view?usp=drivesdk','_blank')"
+              class="title"
+            >
+              Python Programming >
+            </div>
             <div class="institute">Udemy</div>
             <div class="description">
               I successfully completed a comprehensive online course in Python
@@ -359,73 +418,96 @@
     </section>
 
     <section id="contact">
-        <div class="container title">Contact Me</div>
-        <form action="https://formspree.io/f/xdkkplgl" method="post" class="container" id="contact-form">
-            <div class="field">
-                <label for="name">Name</label>
-                <input type="text" name="name" required>
-            </div>
-            <div class="field">
-                <label for="email">Email</label>
-                <input type="email" name="email" required>
-            </div>
-            <div class="field">
-                <label for="name">Message</label>
-                <textarea name="message" rows="5"></textarea>
-            </div>
-            <div class="buttons">
-                <input type="submit" value="Send">
-                <div class="links">
-                    <a href="mailto:jaga55jk@gmail.com"><img src="./images/email.png" alt=""></a>
-                    <a href="https://www.linkedin.com/in/jagadeeshkumar-k-017917257" target="_blank"><img src="./images/linkedin.png" alt=""></a>
-                    <a href="https://wa.me/9344873143" target="_blank"><img src="./images/whatsapp.png" alt=""></a>
-                </div>
-            </div>
-        </form>
+      <div class="container title">Contact Me</div>
+      <form
+        action="https://formspree.io/f/xdkkplgl"
+        method="post"
+        class="container"
+        id="contact-form"
+      >
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" name="name" required />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" name="email" required />
+        </div>
+        <div class="field">
+          <label for="name">Message</label>
+          <textarea name="message" rows="5"></textarea>
+        </div>
+        <div class="buttons">
+          <input type="submit" value="Send" />
+          <div class="links">
+            <a href="mailto:jaga55jk@gmail.com"
+              ><img src="./images/email.png" alt=""
+            /></a>
+            <a
+              href="https://www.linkedin.com/in/jagadeeshkumar-k-017917257"
+              target="_blank"
+              ><img src="./images/linkedin.png" alt=""
+            /></a>
+            <a href="https://wa.me/9344873143" target="_blank"
+              ><img src="./images/whatsapp.png" alt=""
+            /></a>
+          </div>
+        </div>
+      </form>
     </section>
     <section id="footer">
-        <div>@JK</div>
+      <div>@JK</div>
     </section>
     <script>
+      function view(id) {
+        document.getElementById(id).scrollIntoView({
+          behavior: "smooth",
+        });
+      }
 
-        function view(id){
-            document.getElementById(id).scrollIntoView({
-                behavior : "smooth"
-            })
+      document.getElementById("hamburger").addEventListener("click", () => {
+        document.getElementById("overlay").style.display = "block";
+        document.getElementById("navbar").style.transform = "translateX(0px)";
+      });
+
+      document.getElementById("overlay").addEventListener("click", () => {
+        document.getElementById("navbar").style.transform = "translateX(-30em)";
+        document.getElementById("overlay").style.display = "none";
+      });
+
+      var name = "Jagadeeshkumar";
+      var writtenName = "";
+      var index = 0;
+      document.querySelector(".myname").innerHTML = "";
+      function writeName() {
+        console.log("function");
+        var namefiled = document.querySelector(".myname");
+        namefiled.innerHTML += name.charAt(index);
+        index++;
+        if (index < name.length) {
+          setTimeout(() => {
+            writeName();
+          }, 100);
         }
+      }
+      writeName();
 
-        document.getElementById("hamburger").addEventListener("click", () => {
-          document.getElementById("overlay").style.display = "block";
-          document.getElementById("navbar").style.transform = "translateX(0px)"
-        })
-
-        document.getElementById("overlay").addEventListener("click", () => {
-          document.getElementById("navbar").style.transform = "translateX(-30em)";
-          document.getElementById("overlay").style.display = "none"
-        })
-
-
-     
-
-         var name = "Jagadeeshkumar";
-         var writtenName = "";
-         var index = 0;
-         document.querySelector(".myname").innerHTML = "";
-         function writeName(){
-            console.log("function")
-            var namefiled = document.querySelector(".myname")
-            namefiled.innerHTML += name.charAt(index);
-            index++;
-            if (index < name.length){
-                setTimeout(() => {
-                    writeName()
-                }, 100);
-            }
-         }
-         writeName()
-
-
-
+      document
+        .querySelector(".search input")
+        .addEventListener("keydown", function (event) {
+          console.log("runing search funciton")
+          if (event.key == "Enter" && event.target.value.trim() !== "") {
+            console.log("pressed enter")
+            var flag = true;
+            document.querySelectorAll("section").forEach((element) => {
+              if (element.innerText.toLocaleLowerCase().includes(event.target.value.toLocaleLowerCase()) && flag){
+                console.log("found")
+                element.scrollIntoView();
+                flag = false
+              }
+            })
+          }
+        });
     </script>
   </body>
 </html>
