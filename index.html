@@ -11,7 +11,7 @@
     <div id="overlay"></div>
 
     <section id="head">
-      <div id="navbar" class="container">
+      <div id="navbar" class="container animated">
         <div onclick="view('head')" class="logo">< JK ></div>
         <div class="navigation">
           <div onclick="view('about-skills')">About</div>
@@ -23,7 +23,7 @@
         </div>
         <div class="search"><input type="search" placeholder="Search" /></div>
       </div>
-      <div id="hero" class="container">
+      <div id="hero" class="container animated">
         <div class="nameplace">
           <div>Hey I'M</div>
           <div class="name myname">Jagadeeshkumar</div>
@@ -45,7 +45,7 @@
       </div>
     </section>
     <section id="about-skills">
-      <div id="about" class="container">
+      <div id="about" class="container animated">
         <div class="about-heading title">About</div>
         <p class="about-description">
           <span class="tabspace"
@@ -60,7 +60,7 @@
           meaningful contributions to impactful projects.
         </p>
       </div>
-      <div class="skills">
+      <div class="skills animated">
         <div class="skills-heading title">My Skills</div>
         <div class="skill-list">
           <div class="skill-box">
@@ -138,10 +138,10 @@
     </section>
 
     <section id="projects">
-      <div class="container title">Projects</div>
+      <div class="container title animated">Projects</div>
       <div class="project-list container">
         <div class="item">
-          <div class="project-box">
+          <div class="project-box animated">
             <div class="icons">
               <img src="./images/folder.png" alt="" />
               <img src="./images/github.png" alt="" />
@@ -171,7 +171,7 @@
         </div>
 
         <div class="item">
-          <div class="project-box">
+          <div class="project-box animated">
             <div class="icons">
               <img src="./images/folder.png" alt="" />
               <img src="./images/github.png" alt="" />
@@ -202,7 +202,7 @@
         </div>
 
         <div class="item">
-          <div class="project-box">
+          <div class="project-box animated">
             <div class="icons">
               <img src="./images/folder.png" alt="" />
               <img src="./images/github.png" alt="" />
@@ -235,7 +235,7 @@
         </div>
 
         <div class="item">
-          <div class="project-box">
+          <div class="project-box animated">
             <div class="icons">
               <img src="./images/folder.png" alt="" />
               <img src="./images/github.png" alt="" />
@@ -268,8 +268,8 @@
       </div>
     </section>
     <section id="internship">
-      <div class="container title">Internship Experience</div>
-      <div class="internship-details container">
+      <div class="container title animated">Internship Experience</div>
+      <div class="internship-details container animated">
         <div class="photo"><img src="./images/internship.png" alt="" /></div>
         <div class="company-details">
           <span class="company-name"
@@ -286,7 +286,7 @@
           </div>
         </div>
       </div>
-      <div class="internship-details container">
+      <div class="internship-details container animated">
         <div class="photo">
           <img src="./images/internshipimage.png" alt="" />
         </div>
@@ -312,7 +312,7 @@
     <section id="certifications">
       <div class="container title">certifications</div>
       <div class="list container">
-        <div class="certificate">
+        <div class="certificate animated">
           <div class="photo"><img src="./images/cimg1.png" alt="" /></div>
           <div class="certificate-details">
             <div class="title">Full Stack Java Development ></div>
@@ -332,7 +332,7 @@
           </div>
         </div>
 
-        <div class="certificate">
+        <div class="certificate animated">
           <div class="photo"><img src="./images/cimg2.png" alt="" /></div>
           <div class="certificate-details">
             <div
@@ -363,11 +363,11 @@
       </div>
     </section>
     <section id="education">
-      <div class="container title">My Educational Journey</div>
+      <div class="container title animated">My Educational Journey</div>
       <div class="list container">
         <div class="item">
-          <hr />
-          <div class="education-box">
+          <hr class="animated" />
+          <div class="education-box animated">
             <div class="title">Nallamuthu Gounder Mahalingam College</div>
             <div class="course">B.Com Computer Application</div>
             <div class="duration">2020-2023</div>
@@ -382,8 +382,8 @@
           </div>
         </div>
         <div class="item">
-          <hr />
-          <div class="education-box">
+          <hr class="animated" />
+          <div class="education-box animated">
             <div class="title">PMG Matric Higher Secondary School</div>
             <div class="course">HSC</div>
             <div class="duration">2019-2020</div>
@@ -399,8 +399,8 @@
           </div>
         </div>
         <div class="item">
-          <hr />
-          <div class="education-box">
+          <hr class="animated" />
+          <div class="education-box animated">
             <div class="title">PMG Matric Higher Secondary School</div>
             <div class="course">SSLC</div>
             <div class="duration">2017-2018</div>
@@ -418,11 +418,11 @@
     </section>
 
     <section id="contact">
-      <div class="container title">Contact Me</div>
+      <div class="container title animated">Contact Me</div>
       <form
         action="https://formspree.io/f/xdkkplgl"
         method="post"
-        class="container"
+        class="container animated"
         id="contact-form"
       >
         <div class="field">
@@ -458,6 +458,8 @@
     <section id="footer">
       <div>@JK</div>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script>
       function view(id) {
         document.getElementById(id).scrollIntoView({
@@ -495,19 +497,40 @@
       document
         .querySelector(".search input")
         .addEventListener("keydown", function (event) {
-          console.log("runing search funciton")
+          console.log("runing search funciton");
           if (event.key == "Enter" && event.target.value.trim() !== "") {
-            console.log("pressed enter")
+            console.log("pressed enter");
             var flag = true;
             document.querySelectorAll("section").forEach((element) => {
-              if (element.innerText.toLocaleLowerCase().includes(event.target.value.toLocaleLowerCase()) && flag){
-                console.log("found")
+              if (
+                element.innerText
+                  .toLocaleLowerCase()
+                  .includes(event.target.value.toLocaleLowerCase()) &&
+                flag
+              ) {
+                console.log("found");
                 element.scrollIntoView();
-                flag = false
+                flag = false;
               }
-            })
+            });
           }
         });
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      document.querySelectorAll(".animated").forEach((box) => {
+        gsap.from(box, {
+          scrollTrigger: {
+            trigger: box,
+            start: "top 100%",
+            toggleActions: "play none none none",
+          },
+          y: 100,
+          opacity: 0,
+          duration: 1,
+          ease: "power2.out",
+        });
+      });
     </script>
   </body>
 </html>
